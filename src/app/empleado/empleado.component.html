@@ -3,9 +3,14 @@
 <p>Edad: {{ edad < 18 ? "Menor de edad" : "Mayor de edad" }}</p>
 <p>Empresa: {{ empresa.value }}</p>
 
-Introduce las empresa: <input type="text" #empresa (keyup)="0">
+<!--                                                            Property Binding-->
+Introduce las empresa: <input type="text" #empresa (keyup)="0" [disabled]="habilitacionCuadro">
 
 <br/>
 <br/>
 
+Registrado: <input type="checkbox" id="registro" [checked]="usuRegistrado"/>
 <!--<input type="button" value="Dale!" (click)="llamaEmpresa(empresa.value)"/>-->
+
+{{getRegistroUsuario()}}
+
